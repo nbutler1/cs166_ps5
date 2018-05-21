@@ -2,10 +2,13 @@
 
 LinearProbingHashTable::LinearProbingHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   // TODO: Implement this
+  TableHash = family->get();
+  buckets = (int*)malloc(numBuckets * sizeof(int));  
 }
 
 LinearProbingHashTable::~LinearProbingHashTable() {
   // TODO: Implement this
+  free(buckets);
 }
 
 void LinearProbingHashTable::insert(int data) {

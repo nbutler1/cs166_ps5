@@ -58,6 +58,8 @@ private:
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
+  int* buckets;
+  HashingFunction TableHash;
   LinearProbingHashTable(LinearProbingHashTable const &) = delete;
   void operator=(LinearProbingHashTable const &) = delete;
 };
