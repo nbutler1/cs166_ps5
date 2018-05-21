@@ -68,10 +68,9 @@ private:
   //    1 is currently filled
   int* indicators;
   size_t numBucks;
-  HashingFunction TableHash;
+  HashFunction TableHash;
   LinearProbingHashTable(LinearProbingHashTable const &) = delete;
   void operator=(LinearProbingHashTable const &) = delete;
-  size_t increment(size_t bucket);
 };
 
 #endif
