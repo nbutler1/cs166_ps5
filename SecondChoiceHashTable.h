@@ -2,6 +2,7 @@
 #define SecondChoiceHashTable_Included
 
 #include "Hashes.h"
+#include <vector>
 
 class SecondChoiceHashTable {
 public:
