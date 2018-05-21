@@ -1,25 +1,25 @@
 #include "LinearProbingHashTable.h"
 
+size_t increment(size_t numBucks, size_t bucket) {
+  if(bucket >= numBucks - 1)
+    return 0;
+  return bucket + 1;
+}
 
 LinearProbingHashTable::LinearProbingHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   // TODO: Implement this
   TableHash = family->get();
   buckets = (int*)malloc(numBuckets * sizeof(int));  
   numBucks = numBuckets;
-  indicators = (int*)calloc(numBuckets *sizeof(int));
+  indicators = (int*)calloc(numBuckets, sizeof(int));
 }
 
 LinearProbingHashTable::~LinearProbingHashTable() {
   // TODO: Implement this
   free(buckets);
-  free(inidcators);
+  free(indicators);
 }
 
-size_t LinearProbingHashTable::increment(size_t bucket) {
-  if(bucket == numBucks - 1)
-    return 0;
-  return bucket + 1;
-}
 
 void LinearProbingHashTable::insert(int data) {
   size_t bucket = TableHash(data) % numBucks;
@@ -30,7 +30,7 @@ void LinearProbingHashTable::insert(int data) {
   while(empty == 1){
     if(val_at_spot == data)
       return;
-    bucket = increment(bucket);
+    bucket = increment(numBucks, bucket);
     empty = *(indicators + (sizeof(int) + bucket));
     val_at_spot = *(buckets + (sizeof(int) + bucket));
   }
@@ -53,9 +53,9 @@ bool LinearProbingHashTable::contains(int data) const {
     // If tombstone, value has been removed...
     if(empty == -1 && val_at_spot == data)
         return false;
-    bucket = increment(bucket);
-    int empty = *(indicators + (sizeof(int) + bucket));
-    int val_at_spot = *(buckets + (sizeof(int) + bucket));
+    bucket = increment(numBucks, bucket);
+    empty = *(indicators + (sizeof(int) + bucket));
+    val_at_spot = *(buckets + (sizeof(int) + bucket));
   }
   return false;
 }
@@ -71,8 +71,8 @@ void LinearProbingHashTable::remove(int data) {
       *(indicators + (sizeof(int) + bucket)) = -1;
       return;
     }
-    bucket = increment(bucket);
-    int empty = *(indicators + (sizeof(int) + bucket));
-    int val_at_spot = *(buckets + (sizeof(int) + bucket));
+    bucket = increment(numBucks, bucket);
+    empty = *(indicators + (sizeof(int) + bucket));
+    val_at_spot = *(buckets + (sizeof(int) + bucket));
   }
 }
