@@ -2,6 +2,7 @@
 #define ChainedHashTable_Included
 
 #include "Hashes.h"
+#include <vector>
 
 class ChainedHashTable {
 public:
@@ -50,7 +51,7 @@ private:
    * lines.
    */
   size_t numBucks;
-  std::list<std::list<int> > buckets;
+  std::vector<std::vector<int> > buckets;
   HashFunction TableHash;
   ChainedHashTable(ChainedHashTable const &) = delete;
   void operator=(ChainedHashTable const &) = delete;
