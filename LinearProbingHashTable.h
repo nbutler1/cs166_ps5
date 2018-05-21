@@ -2,7 +2,7 @@
 #define LinearProbingHashTable_Included
 
 #include "Hashes.h"
-
+#include <vector>
 class LinearProbingHashTable {
 public:
   /**
@@ -59,14 +59,13 @@ private:
    * lines.
    */
   // Array of buckets containing data
-  int* buckets;
-
+  std::vector<int>  buckets;
   // Array of indicators for each spot.
   // These values will be as follows:
   //    -1 is tombstone inidcating a removed element
   //    0 is empty
   //    1 is currently filled
-  int* indicators;
+  std::vector<int> indicators;
   size_t numBucks;
   HashFunction TableHash;
   LinearProbingHashTable(LinearProbingHashTable const &) = delete;
