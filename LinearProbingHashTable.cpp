@@ -1,7 +1,7 @@
 #include "LinearProbingHashTable.h"
 
 size_t increment(size_t numBucks, size_t bucket) {
-  if(bucket == numBucks - 1)
+  if(bucket >= numBucks - 1)
     return 0;
   return bucket + 1;
 }
