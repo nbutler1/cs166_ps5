@@ -58,10 +58,20 @@ private:
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
+  // Array of buckets containing data
   int* buckets;
+
+  // Array of indicators for each spot.
+  // These values will be as follows:
+  //    -1 is tombstone inidcating a removed element
+  //    0 is empty
+  //    1 is currently filled
+  int* indicators;
+  size_t numBucks;
   HashingFunction TableHash;
   LinearProbingHashTable(LinearProbingHashTable const &) = delete;
   void operator=(LinearProbingHashTable const &) = delete;
+  size_t increment(size_t bucket);
 };
 
 #endif
