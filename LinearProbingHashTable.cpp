@@ -9,9 +9,9 @@ size_t increment(size_t numBucks, size_t bucket) {
 LinearProbingHashTable::LinearProbingHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   TableHash = family->get();
   std::vector<int> temp(numBuckets, 0);
-  buckets = temp.copy(); //(int*)malloc(numBuckets * sizeof(int));  
+  buckets = temp; //(int*)malloc(numBuckets * sizeof(int));  
   numBucks = numBuckets;
-  indicators = temp.copy();
+  indicators = temp;
 }
 
 LinearProbingHashTable::~LinearProbingHashTable() {
@@ -69,7 +69,8 @@ void LinearProbingHashTable::remove(int data) {
   // Loop while we have not found the data
   while(empty != 0){
     if(val_at_spot == data){
-      *(indicators + (sizeof(int) + bucket)) = -1;
+      //*(indicators + (sizeof(int) + bucket)) = -1;
+      indicators[bucket] = -1;
       return;
     }
     bucket = increment(numBucks, bucket);
