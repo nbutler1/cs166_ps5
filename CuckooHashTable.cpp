@@ -22,12 +22,13 @@ void CuckooHashTable::insert(int data) {
   if(i1[buck] == 0){
     b1[buck] = data;
     i1[buck] = 1;
+    return;
   }
   int temp = data;
   size_t counter = 1;
   while(true) {
     // First evict
-    if(counter %2 == 0) {
+    if(counter % 2 == 0) {
       temp = b2[buck];
       b2[buck] = data;
       data = temp;
