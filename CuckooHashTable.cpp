@@ -1,4 +1,5 @@
 #include "CuckooHashTable.h"
+#include <math.h>
 
 CuckooHashTable::CuckooHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   numBucks = numBuckets;
@@ -42,6 +43,7 @@ void CuckooHashTable::insert(int data) {
   // TODO REHASH!!!  
   if(contains(data))
       return;
+  double displacements = 0.0;
   num_elems += 1;
   size_t buck = h1(data) % numBucks;
   if(i1[buck] == 0){
@@ -52,6 +54,11 @@ void CuckooHashTable::insert(int data) {
   int temp = data;
   size_t counter = 1;
   while(true) {
+    displacements += 1;
+    if(displacements >= (6*log(num_elems))){
+      rehash(data);
+      return;
+    }
     // First evict
     if(counter % 2 == 0) {
       temp = b2[buck];
