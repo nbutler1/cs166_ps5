@@ -62,7 +62,7 @@ bool RobinHoodHashTable::contains(int data) const {
   int val_at_spot = buckets.at(bucket);
   
   // Search for empty spot.  If spot has data, just return
-  while(empty == 1){
+  while(empty != 0){
     if(val_at_spot == data)
       return (empty != -1);
     size_t buck_dist = distance(numBucks, TableHash(val_at_spot), bucket);
