@@ -32,15 +32,17 @@ void RobinHoodHashTable::insert(int data) {
   int val_at_spot = buckets.at(bucket);
   
   // Search for empty spot.  If spot has data, just return
-  while(empty == 1){
+  while(empty != 0){
     if(val_at_spot == data)
       return;
     size_t buck_dist = distance(numBucks, TableHash(val_at_spot), bucket);
-    size_t data_dist = distance(numBucks, TableHash(val_at_spot), bucket);
-    if(buck_dist > data_dist){
+    size_t data_dist = distance(numBucks, TableHash(data), bucket);
+    if(buck_dist < data_dist){
       buckets[bucket] = data;
       indicators[bucket] = 1;
       data = val_at_spot;
+      if(empty == -1)
+          return;
     }
     bucket = add_one(numBucks, bucket);
     empty = indicators.at(bucket);
