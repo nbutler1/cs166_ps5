@@ -49,16 +49,22 @@ public:
   void remove(int key);
   
 private:
-  /* TODO: Add any data members or private helper functions that you'll need,
-   * then delete this comment.
-   */
-  
-  
   /* Fun with C++: these next two lines disable implicitly-generated copy
    * functions that would otherwise cause weird errors if you tried to
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
+  
+  // Array of buckets containing data
+  std::vector<int>  buckets;
+  // Array of indicators for each spot.
+  // These values will be as follows:
+  //    -1 is tombstone inidcating a removed element
+  //    0 is empty
+  //    1 is currently filled
+  std::vector<int> indicators;
+  size_t numBucks;
+  HashFunction TableHash;
   RobinHoodHashTable(RobinHoodHashTable const &) = delete;
   void operator=(RobinHoodHashTable const &) = delete;
 };
