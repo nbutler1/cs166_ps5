@@ -48,16 +48,12 @@ public:
   void remove(int key);
   
 private:
-  /* TODO: Add any data members or private helper functions that you'll need,
-   * then delete this comment.
-   */
-  
-  
   /* Fun with C++: these next two lines disable implicitly-generated copy
    * functions that would otherwise cause weird errors if you tried to
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
+  size_t increment(size_t numBucks, size_t bucket);
   // Array of buckets containing data
   std::vector<int>  buckets;
   // Array of indicators for each spot.

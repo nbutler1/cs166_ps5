@@ -55,7 +55,8 @@ private:
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
-  
+  size_t distance(size_t numBucks, size_t hashed, size_t actual);
+  size_t increment(size_t numBucks, size_t buckets); 
   // Array of buckets containing data
   std::vector<int>  buckets;
   // Array of indicators for each spot.
