@@ -42,7 +42,7 @@ for line in data:
         filt = line
         filt = filt.replace('===', '')
         filt = filt.replace('ependent Polynomial Hash', '')
-        filt = filt.replace('ependent Tabulation Hash', '')
+        filt = filt.replace('ependent Tabulation Hash', ' Tab')
         filt = filt.replace('Hash', '')
         filt.strip()
         leg.append(filt)
