@@ -2,6 +2,7 @@
 #define CuckooHashTable_Included
 
 #include "Hashes.h"
+#include <vector>
 
 class CuckooHashTable {
  public:
@@ -59,15 +60,19 @@ class CuckooHashTable {
   void remove(int key);
   
 private:
-  /* TODO: Add any data members or private helper functions that you'll need,
-   * then delete this comment.
-   */
   
   /* Fun with C++: these next two lines disable implicitly-generated copy
    * functions that would otherwise cause weird errors if you tried to
    * implicitly copy an object of this type. You don't need to touch these
    * lines.
    */
+  size_t numBucks;
+  std::vector<int> b1;
+  std::vector<int> b2;
+  std::vector<int> i1;
+  std::vector<int> i2;
+  HashFunction h1;
+  HashFunction h2;
   CuckooHashTable(CuckooHashTable const &) = delete;
   void operator=(CuckooHashTable const &) = delete;
 };

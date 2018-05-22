@@ -2,6 +2,7 @@
 #define RobinHoodHashTable_Included
 
 #include "Hashes.h"
+#include <vector>
 
 class RobinHoodHashTable {
 public:
