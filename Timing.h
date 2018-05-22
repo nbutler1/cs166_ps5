@@ -128,7 +128,9 @@ bool checkCorrectness(size_t buckets, std::shared_ptr<HashFamily> family, size_t
   for (size_t i = 0; i < numActions; i++) {
     int value = gen(engine);
     if ((reference.count(value) > 0) != table.contains(value)) {
-      std::cout<< "First contains problem"<<std::endl;
+      std::cout<< "First contains problem. Action num: "<< i <<std::endl;
+      if(reference.count(value) > 0)
+        std::cout<<"Expected: True"<<std::endl;
       return false;
     }
     if (coinFlip(engine)) {
