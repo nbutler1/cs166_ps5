@@ -1,5 +1,6 @@
 #include "CuckooHashTable.h"
 #include <math.h>
+#include <vector>
 
 CuckooHashTable::CuckooHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   numBucks = numBuckets;
@@ -11,6 +12,7 @@ CuckooHashTable::CuckooHashTable(size_t numBuckets, std::shared_ptr<HashFamily> 
   i1 = temp;
   i2 = temp;
   num_elems = 0;
+  fam = family;
 }
 
 CuckooHashTable::~CuckooHashTable() {
@@ -18,19 +20,19 @@ CuckooHashTable::~CuckooHashTable() {
 }
 
 void CuckooHashTable::rehash(int data){
-  vector<int> all_elems;
+  std::vector<int> all_elems;
   for(size_t i = 0; i < numBucks; i++) {
     if(i1[i] == 1) {
-      all_elms.push_back(b1[i]);
+      all_elems.push_back(b1[i]);
       i1[i] = 0;
     }
     if(i2[i] == 1) {
-      all_elms.push_back(b2[i]);
+      all_elems.push_back(b2[i]);
       i2[i] = 0;
     }
   }
-  h1 = family->get();
-  h2 = family->get();
+  h1 = fam->get();
+  h2 = fam->get();
   num_elems = 0;
   for(size_t j = 0; j < all_elems.size(); j++) {
     insert(all_elems[j]);
@@ -90,8 +92,9 @@ void CuckooHashTable::insert(int data) {
 bool CuckooHashTable::contains(int data) const {
   size_t buck = h1(data) % numBucks;
   size_t buck2 = h2(data) % numBucks;
-  if(b1[buck] == data || b2[buck2] == data)
+  if((b1[buck] == data && i1[buck] == 1) || (b2[buck2] == data && i2[buck2] == 1)){
     return true;
+  }
   return false;
 }
 
