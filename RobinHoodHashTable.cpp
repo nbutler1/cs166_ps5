@@ -66,7 +66,7 @@ bool RobinHoodHashTable::contains(int data) const {
     if(val_at_spot == data)
       return true;
     size_t buck_dist = distance(numBucks, TableHash(val_at_spot), bucket);
-    size_t data_dist = distance(numBucks, TableHash(val_at_spot), bucket);
+    size_t data_dist = distance(numBucks, TableHash(data), bucket);
     if(buck_dist < data_dist){
       return false;
     }
@@ -89,7 +89,7 @@ void RobinHoodHashTable::remove(int data) {
       return;
     }
     size_t buck_dist = distance(numBucks, TableHash(val_at_spot), bucket);
-    size_t data_dist = distance(numBucks, TableHash(val_at_spot), bucket);
+    size_t data_dist = distance(numBucks, TableHash(data), bucket);
     if(buck_dist < data_dist){
       return;
     }
