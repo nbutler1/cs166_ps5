@@ -1,6 +1,6 @@
 #include "RobinHoodHashTable.h"
 
-size_t increment(size_t numBucks, size_t bucket) {
+size_t add_one(size_t numBucks, size_t bucket) {
   if(bucket >= numBucks - 1)
     return 0;
   return bucket + 1;
@@ -42,7 +42,7 @@ void RobinHoodHashTable::insert(int data) {
       indicators[bucket] = 1;
       data = val_at_spot;
     }
-    bucket = increment(numBucks, bucket);
+    bucket = add_one(numBucks, bucket);
     empty = indicators.at(bucket);
     val_at_spot = buckets.at(bucket);
   }
@@ -68,7 +68,7 @@ bool RobinHoodHashTable::contains(int data) const {
     if(buck_dist < data_dist){
       return false;
     }
-    bucket = increment(numBucks, bucket);
+    bucket = add_one(numBucks, bucket);
     empty = indicators.at(bucket);
     val_at_spot = buckets.at(bucket);
   }
@@ -91,7 +91,7 @@ void RobinHoodHashTable::remove(int data) {
     if(buck_dist < data_dist){
       return;
     }
-    bucket = increment(numBucks, bucket);
+    bucket = add_one(numBucks, bucket);
     empty = indicators.at(bucket);
     val_at_spot = buckets.at(bucket);
   }

@@ -16,6 +16,8 @@ CuckooHashTable::~CuckooHashTable() {
 }
 
 void CuckooHashTable::insert(int data) {
+  if(contains(data))
+      return;
   size_t buck = h1(data) % numBucks;
   if(i1[buck] == 0){
     b1[buck] = data;
