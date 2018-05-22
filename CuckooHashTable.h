@@ -59,6 +59,11 @@ class CuckooHashTable {
    */
   void remove(int key);
   
+  /**
+   * Rehashes the entire data structure.
+   */
+
+  void rehash(int data){
 private:
   
   /* Fun with C++: these next two lines disable implicitly-generated copy
@@ -67,6 +72,7 @@ private:
    * lines.
    */
   size_t numBucks;
+  size_t num_elems;
   std::vector<int> b1;
   std::vector<int> b2;
   std::vector<int> i1;
