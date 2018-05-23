@@ -1,4 +1,5 @@
 #include "SecondChoiceHashTable.h"
+#include <algorithm>
 
 SecondChoiceHashTable::SecondChoiceHashTable(size_t numBuckets, std::shared_ptr<HashFamily> family) {
   for(size_t i = 0; i < numBuckets; i++){
@@ -45,14 +46,13 @@ void SecondChoiceHashTable::remove(int data) {
   // TODO: Implement this
   size_t buck1 = h1(data) % numBucks;
   size_t buck2 = h2(data) % numBucks;
-  for(size_t i = 0; i < b1[buck1].size(); i++){
-    if(b1.at(buck1).at(i) == data){
+  size_t size = std::max(b1[buck1].size(), b2[buck2].size());
+  for(size_t i = 0; i < size; i++){
+    if(i < b1[buck1].size() && b1.at(buck1).at(i) == data){
         b1.at(buck1).erase(b1.at(buck1).begin() + i);
         return;
     }
-  } 
-  for(size_t i = 0; i < b2[buck2].size(); i++){
-    if(b2.at(buck2).at(i) == data){
+    if(i < b2[buck2].size() && b2.at(buck2).at(i) == data){
         b2.at(buck2).erase(b2.at(buck2).begin() + i);
         return;
     }
