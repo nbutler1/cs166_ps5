@@ -8,989 +8,491 @@ Correctness Tests
 #### Timing Linear Probing ####
 === 2-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    42.05 ns / op
-    Query:       107.49 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    46.40 ns / op
-    Query:       150.55 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    78.54 ns / op
-    Query:       167.89 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   120.49 ns / op
-    Query:       306.57 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   173.38 ns / op
-    Query:       642.74 ns / op
-=== 3-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    34.02 ns / op
-    Query:       127.58 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    67.42 ns / op
-    Query:       155.04 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   104.08 ns / op
-    Query:       197.32 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   130.63 ns / op
-    Query:       345.88 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   199.26 ns / op
-    Query:       803.81 ns / op
-=== 5-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    36.90 ns / op
-    Query:       121.46 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    64.14 ns / op
-    Query:       148.13 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    95.59 ns / op
-    Query:       198.61 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   147.53 ns / op
-    Query:       405.45 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   246.35 ns / op
-    Query:       672.30 ns / op
-=== 3-Independent Tabulation Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    35.05 ns / op
-    Query:       120.48 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    61.65 ns / op
-    Query:       135.66 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    91.27 ns / op
-    Query:       167.92 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   138.27 ns / op
-    Query:       329.37 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   176.72 ns / op
-    Query:       664.00 ns / op
-=== Identity Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    22.75 ns / op
-    Query:        77.04 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    40.02 ns / op
-    Query:        89.49 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    62.44 ns / op
-    Query:       115.94 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:    95.25 ns / op
-    Query:       232.34 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   124.64 ns / op
-    Query:       572.54 ns / op
-=== Jenkins Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    29.59 ns / op
-    Query:       129.87 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    66.38 ns / op
-    Query:       156.84 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   103.37 ns / op
-    Query:       204.33 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   115.88 ns / op
-    Query:       381.32 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   164.36 ns / op
-    Query:       709.90 ns / op
-###########################
-
-#### Timing Robin Hood ####
-=== 2-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    43.89 ns / op
-    Query:       149.02 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    73.16 ns / op
-    Query:       141.86 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   112.12 ns / op
-    Query:       171.09 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   625.36 ns / op
-    Query:       658.56 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   242.20 ns / op
-    Query:       358.75 ns / op
-=== 3-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    26.49 ns / op
-    Query:       100.33 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    55.23 ns / op
-    Query:       113.36 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    93.11 ns / op
-    Query:       145.01 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   181.80 ns / op
-    Query:       218.35 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   277.35 ns / op
-    Query:       315.64 ns / op
-=== 5-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    27.34 ns / op
-    Query:        96.17 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    54.68 ns / op
-    Query:       117.60 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:    99.76 ns / op
-    Query:       150.83 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   187.24 ns / op
-    Query:       223.13 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   297.81 ns / op
-    Query:       346.97 ns / op
-=== 3-Independent Tabulation Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    44.97 ns / op
-    Query:       176.38 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    87.89 ns / op
-    Query:       264.27 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   166.89 ns / op
-    Query:       285.37 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   354.76 ns / op
-    Query:       483.87 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   627.92 ns / op
-    Query:       713.12 ns / op
-=== Identity Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    25.43 ns / op
-    Query:        86.26 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    52.77 ns / op
-    Query:       115.75 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   108.60 ns / op
-    Query:       157.07 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   159.10 ns / op
-    Query:       199.05 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   226.11 ns / op
-    Query:       252.47 ns / op
-=== Jenkins Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    28.20 ns / op
-    Query:       100.21 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:    56.51 ns / op
-    Query:       123.07 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   101.16 ns / op
-    Query:       158.80 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   195.06 ns / op
-    Query:       238.10 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   303.21 ns / op
-    Query:       364.15 ns / op
-###########################
-
-#### Timing Chained ####
-=== 2-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    91.45 ns / op
-    Query:        98.79 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   120.96 ns / op
-    Query:        93.01 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   168.87 ns / op
-    Query:       105.16 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   231.67 ns / op
-    Query:       119.95 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   279.58 ns / op
-    Query:       118.16 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   543.46 ns / op
-    Query:       182.68 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1356.02 ns / op
-    Query:       239.94 ns / op
-=== 3-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    68.30 ns / op
-    Query:        88.15 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   113.85 ns / op
-    Query:        94.98 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   163.26 ns / op
-    Query:       101.98 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   216.09 ns / op
-    Query:       110.74 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   225.13 ns / op
-    Query:        98.39 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   481.42 ns / op
-    Query:       133.74 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1226.51 ns / op
-    Query:       182.16 ns / op
-=== 5-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    82.21 ns / op
-    Query:       125.42 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   125.90 ns / op
-    Query:       122.01 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   162.63 ns / op
-    Query:       103.82 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   244.15 ns / op
-    Query:       109.76 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   230.89 ns / op
-    Query:       107.85 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   474.96 ns / op
-    Query:       134.68 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1239.98 ns / op
-    Query:       202.62 ns / op
-=== 3-Independent Tabulation Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    76.37 ns / op
-    Query:       120.16 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   124.55 ns / op
-    Query:       136.54 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   180.56 ns / op
-    Query:       125.61 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   226.80 ns / op
-    Query:       129.15 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   264.76 ns / op
-    Query:       132.54 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   536.27 ns / op
-    Query:       159.43 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1217.40 ns / op
-    Query:       211.45 ns / op
-=== Identity Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    69.23 ns / op
-    Query:        96.20 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   118.49 ns / op
-    Query:       104.20 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   175.96 ns / op
-    Query:       108.17 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   229.76 ns / op
-    Query:       112.46 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   271.35 ns / op
-    Query:       127.61 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   513.06 ns / op
-    Query:       143.83 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1254.84 ns / op
-    Query:       173.96 ns / op
-=== Jenkins Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    79.01 ns / op
-    Query:       107.29 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   116.84 ns / op
-    Query:       123.19 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   164.67 ns / op
-    Query:       107.76 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   220.98 ns / op
-    Query:       110.96 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   283.44 ns / op
-    Query:       128.16 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   536.67 ns / op
-    Query:       177.51 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1293.72 ns / op
-    Query:       160.12 ns / op
-###########################
-
-#### Timing Second-Choice ####
-=== 2-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:   106.05 ns / op
-    Query:       127.08 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   173.45 ns / op
-    Query:       149.90 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   240.90 ns / op
-    Query:       147.42 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   304.62 ns / op
-    Query:       157.29 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   346.38 ns / op
-    Query:       172.57 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   727.74 ns / op
-    Query:       222.70 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1775.71 ns / op
-    Query:       245.50 ns / op
-=== 3-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:   102.21 ns / op
-    Query:       132.85 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   169.55 ns / op
-    Query:       145.05 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   235.96 ns / op
-    Query:       151.09 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   374.82 ns / op
-    Query:       202.19 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   330.37 ns / op
-    Query:       199.75 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   736.28 ns / op
-    Query:       277.16 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1912.31 ns / op
-    Query:       251.50 ns / op
-=== 5-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:   114.22 ns / op
-    Query:       187.33 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   207.63 ns / op
-    Query:       180.71 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   264.21 ns / op
-    Query:       185.05 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   327.58 ns / op
-    Query:       198.97 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   366.92 ns / op
-    Query:       198.43 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:   771.75 ns / op
-    Query:       223.83 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  1800.11 ns / op
-    Query:       245.88 ns / op
-=== 3-Independent Tabulation Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:   148.52 ns / op
-    Query:       221.80 ns / op
-  --- Load Factor:  0.50000 ---
-    Insertion:   248.64 ns / op
-    Query:       237.65 ns / op
-  --- Load Factor:  0.70000 ---
-    Insertion:   355.19 ns / op
-    Query:       245.93 ns / op
-  --- Load Factor:  0.90000 ---
-    Insertion:   456.94 ns / op
-    Query:       268.20 ns / op
-  --- Load Factor:  0.99000 ---
-    Insertion:   506.36 ns / op
-    Query:       292.15 ns / op
-  --- Load Factor:  2.00000 ---
-    Insertion:  1041.15 ns / op
-    Query:       315.68 ns / op
-  --- Load Factor:  5.00000 ---
-    Insertion:  2451.65 ns / op
-    Query:       353.81 ns / op
-###########################
-
-#### Timing Cuckoo Hashing ####
-=== 2-Independent Polynomial Hash ===
-  --- Load Factor:  0.20000 ---
-    Insertion:    36.65 ns / op
-    Query:       108.37 ns / op
-  --- Load Factor:  0.30000 ---
-    Insertion:   103.00 ns / op
-    Query:       102.62 ns / op
-  --- Load Factor:  0.40000 ---
-    Insertion:    63.31 ns / op
-    Query:        87.49 ns / op
-  --- Load Factor:  0.45000 ---
-    Insertion:    62.27 ns / op
-    Query:        86.99 ns / op
-  --- Load Factor:  0.47000 ---
-    Insertion:   114.15 ns / op
-    Query:        87.05 ns / op
-=== 3-Independent Polynomial Hash ===
-  --- Load Factor:  0.20000 ---
-    Insertion:    24.92 ns / op
-    Query:        78.56 ns / op
-  --- Load Factor:  0.30000 ---
-    Insertion:    37.19 ns / op
-    Query:        78.96 ns / op
-  --- Load Factor:  0.40000 ---
-    Insertion:    50.89 ns / op
-    Query:        79.37 ns / op
-  --- Load Factor:  0.45000 ---
-    Insertion:    57.91 ns / op
-    Query:        80.69 ns / op
-  --- Load Factor:  0.47000 ---
-    Insertion:    64.97 ns / op
-    Query:        79.72 ns / op
-=== 5-Independent Polynomial Hash ===
-  --- Load Factor:  0.20000 ---
-    Insertion:    25.28 ns / op
-    Query:        83.98 ns / op
-  --- Load Factor:  0.30000 ---
-    Insertion:    38.84 ns / op
-    Query:        84.36 ns / op
-  --- Load Factor:  0.40000 ---
-    Insertion:    54.28 ns / op
-    Query:        85.10 ns / op
-  --- Load Factor:  0.45000 ---
-    Insertion:    60.34 ns / op
-    Query:        85.44 ns / op
-  --- Load Factor:  0.47000 ---
-    Insertion:    64.69 ns / op
-    Query:        85.90 ns / op
-=== 3-Independent Tabulation Hash ===
-  --- Load Factor:  0.20000 ---
-    Insertion:    48.68 ns / op
-    Query:       156.21 ns / op
-  --- Load Factor:  0.30000 ---
-    Insertion:    76.33 ns / op
-    Query:       163.46 ns / op
-  --- Load Factor:  0.40000 ---
-    Insertion:   105.21 ns / op
-    Query:       197.05 ns / op
-  --- Load Factor:  0.45000 ---
-    Insertion:   166.00 ns / op
-    Query:       168.40 ns / op
-  --- Load Factor:  0.47000 ---
-    Insertion:   131.40 ns / op
-    Query:       167.59 ns / op
-###########################
-
-Correctness Tests
-  Chained:        pass
-  Second-Choice:  pass
-  Linear Probing: pass
-  Robin Hood:     pass
-  Cuckoo:         pass
-
-#### Timing Linear Probing ####
-=== 2-Independent Polynomial Hash ===
-  --- Load Factor:  0.30000 ---
-    Insertion:    22.64 ns / op
-    Query:        77.92 ns / op
+    Insertion:    22.63 ns / op
+    Query:        78.04 ns / op
   --- Load Factor:  0.50000 ---
     Insertion:    41.96 ns / op
-    Query:       104.47 ns / op
+    Query:       104.33 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    61.20 ns / op
-    Query:       117.09 ns / op
+    Insertion:    61.26 ns / op
+    Query:       117.13 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:    94.22 ns / op
-    Query:       240.39 ns / op
+    Insertion:    94.25 ns / op
+    Query:       241.22 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   122.48 ns / op
-    Query:       459.82 ns / op
+    Insertion:   122.65 ns / op
+    Query:       459.70 ns / op
 === 3-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    22.73 ns / op
-    Query:        80.49 ns / op
+    Insertion:    22.76 ns / op
+    Query:        80.50 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    40.87 ns / op
-    Query:        95.04 ns / op
+    Insertion:    40.89 ns / op
+    Query:        94.83 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    64.06 ns / op
-    Query:       132.00 ns / op
+    Insertion:    63.96 ns / op
+    Query:       131.93 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   102.06 ns / op
-    Query:       282.51 ns / op
+    Insertion:   102.00 ns / op
+    Query:       282.45 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   136.63 ns / op
-    Query:       604.70 ns / op
+    Insertion:   136.68 ns / op
+    Query:       604.92 ns / op
 === 5-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    23.72 ns / op
-    Query:        82.24 ns / op
+    Insertion:    23.58 ns / op
+    Query:        82.44 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    42.30 ns / op
-    Query:        95.62 ns / op
+    Insertion:    42.31 ns / op
+    Query:        96.51 ns / op
   --- Load Factor:  0.70000 ---
     Insertion:    65.73 ns / op
-    Query:       131.69 ns / op
+    Query:       131.75 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   103.74 ns / op
-    Query:       274.58 ns / op
+    Insertion:   103.75 ns / op
+    Query:       274.57 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   141.44 ns / op
-    Query:       577.60 ns / op
+    Insertion:   141.35 ns / op
+    Query:       577.65 ns / op
 === 3-Independent Tabulation Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    33.36 ns / op
-    Query:       115.51 ns / op
+    Insertion:    33.37 ns / op
+    Query:       115.41 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    58.62 ns / op
-    Query:       129.56 ns / op
+    Insertion:    58.69 ns / op
+    Query:       129.60 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    88.15 ns / op
-    Query:       162.92 ns / op
+    Insertion:    88.12 ns / op
+    Query:       163.20 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   133.67 ns / op
-    Query:       318.34 ns / op
+    Insertion:   133.69 ns / op
+    Query:       318.30 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   169.19 ns / op
-    Query:       574.84 ns / op
+    Insertion:   169.37 ns / op
+    Query:       574.70 ns / op
 === Identity Hash ===
   --- Load Factor:  0.30000 ---
     Insertion:    21.89 ns / op
-    Query:        75.06 ns / op
+    Query:        74.86 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    38.83 ns / op
-    Query:        87.26 ns / op
+    Insertion:    38.80 ns / op
+    Query:        86.92 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    59.29 ns / op
-    Query:       112.39 ns / op
+    Insertion:    59.45 ns / op
+    Query:       111.91 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:    90.97 ns / op
-    Query:       223.99 ns / op
+    Insertion:    91.02 ns / op
+    Query:       223.72 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   119.44 ns / op
-    Query:       447.26 ns / op
+    Insertion:   119.42 ns / op
+    Query:       447.19 ns / op
 === Jenkins Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    23.99 ns / op
-    Query:        83.82 ns / op
+    Insertion:    24.10 ns / op
+    Query:        84.10 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    42.99 ns / op
-    Query:        97.49 ns / op
+    Insertion:    43.09 ns / op
+    Query:        98.21 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    66.25 ns / op
-    Query:       130.78 ns / op
+    Insertion:    66.51 ns / op
+    Query:       131.03 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   103.46 ns / op
-    Query:       268.11 ns / op
+    Insertion:   103.51 ns / op
+    Query:       268.12 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   138.47 ns / op
-    Query:       567.17 ns / op
+    Insertion:   138.48 ns / op
+    Query:       567.25 ns / op
 ###########################
 
 #### Timing Robin Hood ####
 === 2-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
     Insertion:    25.15 ns / op
-    Query:        87.38 ns / op
+    Query:        87.34 ns / op
   --- Load Factor:  0.50000 ---
     Insertion:    48.03 ns / op
-    Query:       103.76 ns / op
+    Query:       103.79 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    82.84 ns / op
+    Insertion:    82.91 ns / op
     Query:       128.62 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   542.23 ns / op
-    Query:       636.63 ns / op
+    Insertion:   541.89 ns / op
+    Query:       628.68 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   231.55 ns / op
-    Query:       259.76 ns / op
+    Insertion:   231.62 ns / op
+    Query:       259.95 ns / op
 === 3-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    25.70 ns / op
-    Query:        90.24 ns / op
+    Insertion:    25.72 ns / op
+    Query:        90.14 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    51.16 ns / op
-    Query:       110.44 ns / op
+    Insertion:    51.18 ns / op
+    Query:       110.24 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    90.12 ns / op
-    Query:       140.85 ns / op
+    Insertion:    90.04 ns / op
+    Query:       140.54 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   176.68 ns / op
-    Query:       211.81 ns / op
+    Insertion:   176.69 ns / op
+    Query:       211.87 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   267.79 ns / op
-    Query:       301.47 ns / op
+    Insertion:   267.67 ns / op
+    Query:       301.19 ns / op
 === 5-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    26.53 ns / op
-    Query:        93.53 ns / op
+    Insertion:    26.54 ns / op
+    Query:        93.71 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    53.44 ns / op
-    Query:       114.63 ns / op
+    Insertion:    53.26 ns / op
+    Query:       114.33 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    94.51 ns / op
-    Query:       146.99 ns / op
+    Insertion:    94.43 ns / op
+    Query:       146.81 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   179.33 ns / op
-    Query:       216.06 ns / op
+    Insertion:   179.64 ns / op
+    Query:       215.30 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   278.11 ns / op
-    Query:       304.97 ns / op
+    Insertion:   278.40 ns / op
+    Query:       305.32 ns / op
 === 3-Independent Tabulation Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    40.51 ns / op
-    Query:       152.04 ns / op
+    Insertion:    40.66 ns / op
+    Query:       152.10 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    83.95 ns / op
-    Query:       196.03 ns / op
+    Insertion:    84.11 ns / op
+    Query:       196.21 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   160.63 ns / op
-    Query:       271.00 ns / op
+    Insertion:   160.74 ns / op
+    Query:       270.96 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   333.19 ns / op
-    Query:       437.71 ns / op
+    Insertion:   333.22 ns / op
+    Query:       437.84 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   540.11 ns / op
-    Query:       616.67 ns / op
+    Insertion:   540.18 ns / op
+    Query:       616.86 ns / op
 === Identity Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    24.08 ns / op
-    Query:        83.33 ns / op
+    Insertion:    24.43 ns / op
+    Query:        83.24 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    46.36 ns / op
-    Query:        99.66 ns / op
+    Insertion:    46.35 ns / op
+    Query:       100.10 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    79.78 ns / op
-    Query:       124.14 ns / op
+    Insertion:    79.80 ns / op
+    Query:       124.44 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   147.72 ns / op
-    Query:       180.65 ns / op
+    Insertion:   147.79 ns / op
+    Query:       185.98 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   220.49 ns / op
-    Query:       245.53 ns / op
+    Insertion:   224.17 ns / op
+    Query:       245.65 ns / op
 === Jenkins Hash ===
   --- Load Factor:  0.30000 ---
     Insertion:    27.41 ns / op
-    Query:        97.27 ns / op
+    Query:        97.32 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:    54.93 ns / op
-    Query:       119.30 ns / op
+    Insertion:    55.09 ns / op
+    Query:       119.64 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:    98.47 ns / op
-    Query:       154.05 ns / op
+    Insertion:   113.79 ns / op
+    Query:       200.03 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   189.84 ns / op
-    Query:       231.41 ns / op
+    Insertion:   199.85 ns / op
+    Query:       245.10 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   292.86 ns / op
-    Query:       322.94 ns / op
+    Insertion:   302.49 ns / op
+    Query:       329.25 ns / op
 ###########################
 
 #### Timing Chained ####
 === 2-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    63.60 ns / op
-    Query:        79.40 ns / op
+    Insertion:    64.47 ns / op
+    Query:        80.25 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   105.18 ns / op
-    Query:        86.56 ns / op
+    Insertion:   107.08 ns / op
+    Query:        87.06 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   148.15 ns / op
-    Query:        89.87 ns / op
+    Insertion:   149.21 ns / op
+    Query:        90.06 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   191.27 ns / op
-    Query:        90.40 ns / op
+    Insertion:   192.43 ns / op
+    Query:        89.82 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   211.12 ns / op
-    Query:        90.97 ns / op
+    Insertion:   211.74 ns / op
+    Query:        90.62 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   417.82 ns / op
-    Query:       102.84 ns / op
+    Insertion:   419.20 ns / op
+    Query:       102.96 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  1119.58 ns / op
-    Query:       212.82 ns / op
+    Insertion:  1165.62 ns / op
+    Query:       246.74 ns / op
 === 3-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    62.88 ns / op
-    Query:        80.90 ns / op
+    Insertion:    63.34 ns / op
+    Query:        82.92 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   106.59 ns / op
-    Query:        87.70 ns / op
+    Insertion:   107.71 ns / op
+    Query:        88.70 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   153.02 ns / op
-    Query:        90.36 ns / op
+    Insertion:   151.49 ns / op
+    Query:        91.18 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   194.46 ns / op
-    Query:        92.38 ns / op
+    Insertion:   195.13 ns / op
+    Query:        93.38 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   213.60 ns / op
-    Query:        94.49 ns / op
+    Insertion:   215.43 ns / op
+    Query:        94.61 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   421.42 ns / op
-    Query:       109.24 ns / op
+    Insertion:   482.89 ns / op
+    Query:       114.53 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:   947.43 ns / op
-    Query:       132.32 ns / op
+    Insertion:   956.00 ns / op
+    Query:       131.61 ns / op
 === 5-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    63.52 ns / op
-    Query:        83.42 ns / op
+    Insertion:    64.57 ns / op
+    Query:        84.01 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   107.74 ns / op
-    Query:        90.32 ns / op
+    Insertion:   108.66 ns / op
+    Query:        90.95 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   153.31 ns / op
-    Query:        92.44 ns / op
+    Insertion:   153.79 ns / op
+    Query:        93.48 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   196.32 ns / op
-    Query:        95.28 ns / op
+    Insertion:   198.35 ns / op
+    Query:        96.29 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   216.02 ns / op
-    Query:        96.76 ns / op
+    Insertion:   217.05 ns / op
+    Query:        97.38 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   425.14 ns / op
-    Query:       111.56 ns / op
+    Insertion:   449.69 ns / op
+    Query:       111.90 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:   958.50 ns / op
-    Query:       130.75 ns / op
+    Insertion:  1042.07 ns / op
+    Query:       142.49 ns / op
 === 3-Independent Tabulation Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    73.15 ns / op
-    Query:       116.05 ns / op
+    Insertion:    73.52 ns / op
+    Query:       116.90 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   123.77 ns / op
-    Query:       123.29 ns / op
+    Insertion:   124.53 ns / op
+    Query:       123.20 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   174.63 ns / op
-    Query:       125.39 ns / op
+    Insertion:   175.70 ns / op
+    Query:       178.13 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   225.30 ns / op
-    Query:       127.31 ns / op
+    Insertion:   230.75 ns / op
+    Query:       129.77 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   247.46 ns / op
-    Query:       128.96 ns / op
+    Insertion:   248.52 ns / op
+    Query:       129.71 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   488.61 ns / op
-    Query:       143.96 ns / op
+    Insertion:   490.38 ns / op
+    Query:       144.63 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  1121.43 ns / op
-    Query:       164.40 ns / op
+    Insertion:  1135.64 ns / op
+    Query:       167.35 ns / op
 === Identity Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    61.29 ns / op
-    Query:        75.56 ns / op
+    Insertion:    61.62 ns / op
+    Query:        76.51 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   103.43 ns / op
-    Query:        82.47 ns / op
+    Insertion:   103.77 ns / op
+    Query:        83.38 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   146.50 ns / op
-    Query:        85.85 ns / op
+    Insertion:   151.76 ns / op
+    Query:        87.17 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   188.69 ns / op
-    Query:        87.48 ns / op
+    Insertion:   189.41 ns / op
+    Query:        88.50 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   207.42 ns / op
-    Query:        87.70 ns / op
+    Insertion:   209.81 ns / op
+    Query:        89.16 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   410.66 ns / op
-    Query:        98.88 ns / op
+    Insertion:   412.26 ns / op
+    Query:        99.23 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:   906.95 ns / op
-    Query:       114.20 ns / op
+    Insertion:   911.60 ns / op
+    Query:       115.46 ns / op
 === Jenkins Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    64.17 ns / op
-    Query:        85.06 ns / op
+    Insertion:    64.99 ns / op
+    Query:        86.21 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   108.93 ns / op
-    Query:        91.76 ns / op
+    Insertion:   110.38 ns / op
+    Query:        93.62 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   153.78 ns / op
-    Query:        94.95 ns / op
+    Insertion:   154.56 ns / op
+    Query:       118.12 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   198.39 ns / op
-    Query:       119.48 ns / op
+    Insertion:   199.32 ns / op
+    Query:        97.57 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   226.63 ns / op
-    Query:        98.71 ns / op
+    Insertion:   220.08 ns / op
+    Query:        99.50 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   428.17 ns / op
-    Query:       112.57 ns / op
+    Insertion:   438.00 ns / op
+    Query:       141.09 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:   967.02 ns / op
-    Query:       133.08 ns / op
+    Insertion:  1029.93 ns / op
+    Query:       135.35 ns / op
 ###########################
 
 #### Timing Second-Choice ####
 === 2-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    88.48 ns / op
-    Query:       103.73 ns / op
+    Insertion:   104.92 ns / op
+    Query:       121.33 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   145.52 ns / op
-    Query:       112.54 ns / op
+    Insertion:   149.57 ns / op
+    Query:       115.45 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   201.42 ns / op
-    Query:       117.94 ns / op
+    Insertion:   203.96 ns / op
+    Query:       124.38 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   261.80 ns / op
-    Query:       127.09 ns / op
+    Insertion:   266.18 ns / op
+    Query:       131.94 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   287.56 ns / op
-    Query:       131.81 ns / op
+    Insertion:   287.69 ns / op
+    Query:       132.78 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   588.78 ns / op
-    Query:       168.34 ns / op
+    Insertion:   597.39 ns / op
+    Query:       174.92 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  1456.61 ns / op
-    Query:       199.99 ns / op
+    Insertion:  1473.80 ns / op
+    Query:       200.20 ns / op
 === 3-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    84.82 ns / op
-    Query:        99.86 ns / op
+    Insertion:    85.49 ns / op
+    Query:       101.48 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   141.76 ns / op
-    Query:       109.90 ns / op
+    Insertion:   141.55 ns / op
+    Query:       109.73 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   196.47 ns / op
-    Query:       115.25 ns / op
+    Insertion:   200.34 ns / op
+    Query:       118.75 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   254.44 ns / op
-    Query:       120.59 ns / op
+    Insertion:   255.82 ns / op
+    Query:       132.06 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   278.70 ns / op
-    Query:       124.28 ns / op
+    Insertion:   281.72 ns / op
+    Query:       126.20 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   573.34 ns / op
-    Query:       160.41 ns / op
+    Insertion:   591.92 ns / op
+    Query:       165.95 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  1421.36 ns / op
-    Query:       187.85 ns / op
+    Insertion:  1428.35 ns / op
+    Query:       190.43 ns / op
 === 5-Independent Polynomial Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:    87.23 ns / op
-    Query:       105.65 ns / op
+    Insertion:    87.00 ns / op
+    Query:       106.06 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   145.37 ns / op
-    Query:       115.40 ns / op
+    Insertion:   143.52 ns / op
+    Query:       112.70 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   200.91 ns / op
-    Query:       118.77 ns / op
+    Insertion:   201.54 ns / op
+    Query:       119.86 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   261.84 ns / op
-    Query:       123.82 ns / op
+    Insertion:   259.99 ns / op
+    Query:       127.44 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   287.37 ns / op
-    Query:       129.06 ns / op
+    Insertion:   287.98 ns / op
+    Query:       133.14 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   583.29 ns / op
-    Query:       161.30 ns / op
+    Insertion:   599.63 ns / op
+    Query:       169.01 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  1443.97 ns / op
-    Query:       191.09 ns / op
+    Insertion:  1496.04 ns / op
+    Query:       194.51 ns / op
 === 3-Independent Tabulation Hash ===
   --- Load Factor:  0.30000 ---
-    Insertion:   131.82 ns / op
-    Query:       175.51 ns / op
+    Insertion:   130.06 ns / op
+    Query:       176.76 ns / op
   --- Load Factor:  0.50000 ---
-    Insertion:   215.51 ns / op
-    Query:       185.30 ns / op
+    Insertion:   215.63 ns / op
+    Query:       185.23 ns / op
   --- Load Factor:  0.70000 ---
-    Insertion:   301.82 ns / op
-    Query:       189.89 ns / op
+    Insertion:   301.06 ns / op
+    Query:       192.15 ns / op
   --- Load Factor:  0.90000 ---
-    Insertion:   385.29 ns / op
-    Query:       196.27 ns / op
+    Insertion:   389.32 ns / op
+    Query:       225.85 ns / op
   --- Load Factor:  0.99000 ---
-    Insertion:   424.01 ns / op
-    Query:       198.75 ns / op
+    Insertion:   429.15 ns / op
+    Query:       206.89 ns / op
   --- Load Factor:  2.00000 ---
-    Insertion:   850.26 ns / op
-    Query:       233.80 ns / op
+    Insertion:   858.86 ns / op
+    Query:       242.98 ns / op
   --- Load Factor:  5.00000 ---
-    Insertion:  2023.72 ns / op
-    Query:       274.07 ns / op
+    Insertion:  2076.18 ns / op
+    Query:       276.46 ns / op
 ###########################
 
 #### Timing Cuckoo Hashing ####
 === 2-Independent Polynomial Hash ===
   --- Load Factor:  0.20000 ---
-    Insertion:    26.45 ns / op
-    Query:        85.55 ns / op
+    Insertion:    26.38 ns / op
+    Query:        85.39 ns / op
   --- Load Factor:  0.30000 ---
-    Insertion:    82.56 ns / op
-    Query:        83.85 ns / op
+    Insertion:    82.39 ns / op
+    Query:        83.62 ns / op
   --- Load Factor:  0.40000 ---
-    Insertion:    53.15 ns / op
-    Query:        84.04 ns / op
+    Insertion:    53.13 ns / op
+    Query:        84.13 ns / op
   --- Load Factor:  0.45000 ---
-    Insertion:    60.27 ns / op
-    Query:        84.32 ns / op
+    Insertion:    60.34 ns / op
+    Query:        84.34 ns / op
   --- Load Factor:  0.47000 ---
-    Insertion:   110.75 ns / op
-    Query:        84.39 ns / op
+    Insertion:   110.70 ns / op
+    Query:        84.50 ns / op
 === 3-Independent Polynomial Hash ===
   --- Load Factor:  0.20000 ---
-    Insertion:    24.18 ns / op
-    Query:        78.27 ns / op
+    Insertion:    24.30 ns / op
+    Query:        78.30 ns / op
   --- Load Factor:  0.30000 ---
-    Insertion:    37.10 ns / op
+    Insertion:    37.15 ns / op
     Query:        78.67 ns / op
   --- Load Factor:  0.40000 ---
-    Insertion:    50.77 ns / op
+    Insertion:    50.81 ns / op
     Query:        79.10 ns / op
   --- Load Factor:  0.45000 ---
-    Insertion:    57.75 ns / op
-    Query:        79.31 ns / op
+    Insertion:    57.82 ns / op
+    Query:        79.32 ns / op
   --- Load Factor:  0.47000 ---
-    Insertion:    60.45 ns / op
-    Query:        79.38 ns / op
+    Insertion:    60.48 ns / op
+    Query:        79.37 ns / op
 === 5-Independent Polynomial Hash ===
   --- Load Factor:  0.20000 ---
-    Insertion:    25.23 ns / op
-    Query:        83.57 ns / op
+    Insertion:    25.25 ns / op
+    Query:        83.62 ns / op
   --- Load Factor:  0.30000 ---
-    Insertion:    38.68 ns / op
-    Query:        83.96 ns / op
+    Insertion:    38.73 ns / op
+    Query:        84.04 ns / op
   --- Load Factor:  0.40000 ---
-    Insertion:    52.71 ns / op
-    Query:        84.37 ns / op
+    Insertion:    52.79 ns / op
+    Query:        84.43 ns / op
   --- Load Factor:  0.45000 ---
-    Insertion:    60.05 ns / op
+    Insertion:    60.08 ns / op
     Query:        84.62 ns / op
   --- Load Factor:  0.47000 ---
-    Insertion:    62.90 ns / op
-    Query:        84.76 ns / op
+    Insertion:    62.96 ns / op
+    Query:        84.68 ns / op
 === 3-Independent Tabulation Hash ===
   --- Load Factor:  0.20000 ---
-    Insertion:    48.06 ns / op
+    Insertion:    48.10 ns / op
     Query:       153.75 ns / op
   --- Load Factor:  0.30000 ---
-    Insertion:    73.32 ns / op
-    Query:       154.22 ns / op
+    Insertion:    73.38 ns / op
+    Query:       154.28 ns / op
   --- Load Factor:  0.40000 ---
-    Insertion:    99.31 ns / op
+    Insertion:    99.39 ns / op
     Query:       154.67 ns / op
   --- Load Factor:  0.45000 ---
-    Insertion:   112.54 ns / op
-    Query:       154.84 ns / op
+    Insertion:   112.67 ns / op
+    Query:       154.88 ns / op
   --- Load Factor:  0.47000 ---
-    Insertion:   117.72 ns / op
-    Query:       155.01 ns / op
+    Insertion:   117.79 ns / op
+    Query:       155.02 ns / op
 ###########################
 
