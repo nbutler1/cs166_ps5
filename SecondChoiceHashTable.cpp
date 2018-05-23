@@ -17,19 +17,13 @@ SecondChoiceHashTable::~SecondChoiceHashTable() {
 
 
 void SecondChoiceHashTable::insert(int data) {
+  if(contains(data))
+     return; 
   size_t buck1 = h1(data) % numBucks;
   size_t buck2 = h2(data) % numBucks;
   if(b1[buck1].size() < b2[buck2].size()){
-    for(size_t i = 0; i < b1[buck1].size(); i++){
-        if(b1.at(buck1).at(i) == data)
-            return;
-      }
       b1[buck1].push_back(data);
   }else{
-    for(size_t i = 0; i < b2[buck2].size(); i++){
-        if(b2.at(buck2).at(i) == data)
-            return;
-    } 
     b2[buck2].push_back(data);
   }
 }
